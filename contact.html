@@ -53,7 +53,7 @@
     <div class="container" style="position:relative;z-index:2;">
       <p class="page-hero-label">Contact</p>
       <h1 id="contact-heading">Let's<br>Talk.</h1>
-      <p class="page-hero-sub">The first step is a free 15-minute consultation. No commitment — just a conversation about where you are and whether working together makes sense.</p>
+      <p class="page-hero-sub">The first step is a free 15-minute consultation. No commitment. Just a conversation about where you are and whether working together makes sense.</p>
     </div>
   </section>
 
@@ -68,11 +68,11 @@
 
           <div class="contact-detail">
             <p class="contact-detail-label">Location</p>
-            <p>Atlanta, GA<br>All sessions conducted virtually</p>
+            <p>Atlanta, GA<br>In-Person · Virtual services </p>
           </div>
           <div class="contact-detail">
             <p class="contact-detail-label">Coverage</p>
-            <p>PSYPACT authorized in 38 states.<br>Reach out to confirm your state.</p>
+            <p>PSYPACT authorized in 42 states.<br>Reach out to confirm your state.</p>
           </div>
           <div class="contact-detail">
             <p class="contact-detail-label">Email</p>
@@ -85,7 +85,7 @@
           </div>
           <div class="contact-detail">
             <p class="contact-detail-label">Crisis Support</p>
-            <p>If you are in crisis, please call <strong style="color:#0F0F0F;">988</strong> or go to your nearest emergency room. Dr. Kraska does not provide crisis services.</p>
+            <p>If you are in crisis, please call <strong style="color:#0F0F0F;">988</strong> or go to your nearest emergency room.</p>
           </div>
 
           <div style="margin-top:2.5rem; padding-top:2rem; border-top:1px solid rgba(0,0,0,0.08);">
@@ -107,8 +107,8 @@
             2. Create a new form to get a form endpoint
             3. Replace action URL below with: https://formspree.io/f/YOUR_FORM_ID
           -->
-          <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate aria-label="Consultation request form">
-
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate aria-label="Consultation request form">
+            <input type="hidden" name="access_key" value="b575952c-e33f-459f-9ab2-68a8e1054208" />
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Full Name *</label>
@@ -143,8 +143,8 @@
               <label for="reason">Reason for Reaching Out *</label>
               <select id="reason" name="reason" required>
                 <option value="" disabled selected>Select a reason</option>
-                <option value="sport-psychology">Sport Psychology / Performance</option>
-                <option value="individual-counseling">Individual Counseling</option>
+                <option value="sport-psychology">Sport & Performance Psychology</option>
+                <option value="individual-counseling">Clinical Psychology</option>
                 <option value="team-consulting">Team / Group Consulting</option>
                 <option value="speaking">Speaking Event</option>
                 <option value="consultation">Free Initial Consultation</option>
@@ -157,20 +157,58 @@
               <label for="state">Your State *</label>
               <select id="state" name="state" required>
                 <option value="" disabled selected>Select your state</option>
-                <option>Alabama</option><option>Arizona</option><option>Arkansas</option>
-                <option>Colorado</option><option>Connecticut</option><option>Delaware</option>
-                <option>District of Columbia</option><option>Florida</option><option>Georgia</option>
-                <option>Idaho</option><option>Illinois</option><option>Indiana</option>
-                <option>Kansas</option><option>Kentucky</option><option>Maine</option>
-                <option>Maryland</option><option>Michigan</option><option>Minnesota</option>
-                <option>Mississippi</option><option>Missouri</option><option>Nebraska</option>
-                <option>Nevada</option><option>New Hampshire</option><option>New Jersey</option>
-                <option>North Carolina</option><option>North Dakota</option><option>Ohio</option>
-                <option>Oklahoma</option><option>Pennsylvania</option><option>Rhode Island</option>
-                <option>South Carolina</option><option>South Dakota</option><option>Tennessee</option>
-                <option>Texas</option><option>Utah</option><option>Virginia</option>
-                <option>Washington</option><option>West Virginia</option><option>Wisconsin</option>
-                <option>Wyoming</option><option value="other-state">My state is not listed</option>
+                <option>Alabama</option>
+                <option>Alaska</option>
+                <option>Arizona</option>
+                <option>Arkansas</option>
+                <option>California</option>
+                <option>Colorado</option>
+                <option>Connecticut</option>
+                <option>Delaware</option>
+                <option>District of Columbia</option>
+                <option>Florida</option>
+                <option>Georgia</option>
+                <option>Hawaii</option>
+                <option>Idaho</option>
+                <option>Illinois</option>
+                <option>Indiana</option>
+                <option>Iowa</option>
+                <option>Kansas</option>
+                <option>Kentucky</option>
+                <option>Louisiana</option>
+                <option>Maine</option>
+                <option>Maryland</option>
+                <option>Massachusetts</option>
+                <option>Michigan</option>
+                <option>Minnesota</option>
+                <option>Mississippi</option>
+                <option>Missouri</option>
+                <option>Montana</option>
+                <option>Nebraska</option>
+                <option>Nevada</option>
+                <option>New Hampshire</option>
+                <option>New Jersey</option>
+                <option>New Mexico</option>
+                <option>New York</option>
+                <option>North Carolina</option>
+                <option>North Dakota</option>
+                <option>Ohio</option>
+                <option>Oklahoma</option>
+                <option>Oregon</option>
+                <option>Pennsylvania</option>
+                <option>Rhode Island</option>
+                <option>South Carolina</option>
+                <option>South Dakota</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Utah</option>
+                <option>Vermont</option>
+                <option>Virginia</option>
+                <option>Washington</option>
+                <option>West Virginia</option>
+                <option>Wisconsin</option>
+                <option>Wyoming</option>
+                <option value="other">Outside the US</option>
               </select>
               <span class="form-error">Please select your state.</span>
             </div>
@@ -215,7 +253,7 @@
       <div class="psypact-inner">
         <div class="fade-up">
           <p class="section-label section-label-light">Coverage</p>
-          <h2 id="psypact-contact-heading" class="psypact-headline">Authorized in<br>38 States</h2>
+          <h2 id="psypact-contact-heading" class="psypact-headline">Authorized in<br>42 States</h2>
           <p class="psypact-body">Dr. Kraska holds PSYPACT authorization to practice telepsychology across nearly the entire continental US. Sessions are conducted virtually via a secure video platform.</p>
         </div>
         <div class="state-grid fade-up fade-up-delay-1" aria-label="Authorized states">
@@ -235,7 +273,7 @@
           Kraska Psychology & Performance
           <span>Licensed Psychologist · Atlanta, GA</span>
         </a>
-        <p>Evidence-based psychology for athletes, performers, and individuals. Serving Atlanta and 38 states via telepsychology.</p>
+        <p>Evidence-based psychology for athletes, performers, and individuals. Serving Atlanta and 42 states via telepsychology.</p>
       </div>
       <div class="footer-col">
         <h4>Pages</h4>
@@ -247,14 +285,14 @@
       <div class="footer-col">
         <h4>Services</h4>
         <a href="services.html#sport-psychology">Sport Psychology</a>
-        <a href="services.html#counseling">Counseling</a>
+        <a href="services.html#counseling">Clinical Psychology</a>
         <a href="services.html#team-consulting">Team & Group</a>
         <a href="services.html#speaking">Speaking Events</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <a href="contact.html">Request a Consultation</a>
-        <a href="/cdn-cgi/l/email-protection#5531277b3f303b3b3c3330273e2734263e34153238343c397b363a38"><span class="__cf_email__" data-cfemail="e98d9bc7838c8787808f8c9b829b889a8288a98e84888085c78a8684">[email&#160;protected]</span></a>
+        <a href="mailto:dr.k@kraskapsychologyandperformance.com">dr.k@kraskapsychologyandperformance.com</a>
       </div>
     </div>
     <div class="footer-bottom">
