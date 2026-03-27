@@ -64,6 +64,75 @@ ol {
   list-style: none;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cream: #f0eae0;
+    --cream-dark: #e8e0d0;
+  }
+  .section-white {
+    background: #1a1a1a;
+  }
+  .section-cream {
+    background: #2a2520;
+  }
+  .section-cream-dark {
+    background: #252018;
+  }
+  .about-body p,
+  .service-detail-right p,
+  .faq-a,
+  .prose p {
+    color: #ccc;
+  }
+  .section-headline,
+  .pillar h4,
+  .faq-q,
+  .article-card h3 {
+    color: #f0ead8;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: #2a2a2a;
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+  .testimonial-card,
+  .article-card,
+  .sidebar-block {
+    background: #2a2a2a;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .credentials-block li,
+  .about-body p {
+    color: #bbb;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .nav-toggle span {
+    background: var(--white);
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    background: var(--black);
+  }
+}
+
+@media (max-width: 540px) {
+  .btn-primary {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+  }
+  .btn-primary:hover {
+    background: var(--black-mid);
+    border-color: var(--black-mid);
+  }
+}
+
 /* ─── CONTAINER ──────────────────────────────────────────────── */
 .container {
   max-width: var(--max-w);
@@ -290,6 +359,24 @@ ol {
   margin-top: 1.5rem;
   align-self: flex-start;
   padding: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-photo-wrap {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 900px) {
+  [style*="grid-template-columns:1.1fr 0.9fr"],
+  [style*="grid-template-columns:0.9fr 1.1fr"],
+  [style*="grid-template-columns:1.2fr 0.8fr"] {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /* ─── SECTION UTILITIES ──────────────────────────────────────── */
