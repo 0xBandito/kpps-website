@@ -148,9 +148,26 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       if (valid) {
-        contactForm.style.display = 'none';
-        var success = document.querySelector('.form-success');
-        if (success) success.classList.add('visible');
+        var formData = new FormData(contactForm);
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        })
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+          if (data.success) {
+            contactForm.reset();
+            contactForm.style.display = 'none';
+            var success = document.querySelector('.form-success');
+            if (success) success.classList.add('visible');
+            window.scrollTo({ top: success.offsetTop - 100, behavior: 'smooth' });
+          } else {
+            alert('Something went wrong. Please email dr.k@kraskapsychologyandperformance.com directly.');
+          }
+        })
+        .catch(function() {
+          alert('Something went wrong. Please email dr.k@kraskapsychologyandperformance.com directly.');
+        });
       }
     });
 
